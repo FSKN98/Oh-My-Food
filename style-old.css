@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@300;400;500&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+​ .container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto !important;
+}
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/*Loader*/
+.loaderContainer {
+  position: absolute;
+
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+}
+.dot {
+  width: 3%;
+  height: 3%;
+  border-radius: 50%;
+  background: #99e2d0;
+  margin: 0 15px;
+  animation: loader infinite 0.3s alternate;
+}
+.d2 {
+  animation-delay: 0.05s;
+  background: #9356dc;
+}
+.d3 {
+  animation-delay: 0.1s;
+  background: #cc2366;
+}
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+/*.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #9356dc;
+  border-right: 10px solid #cc2366;
+  border-bottom: 10px solid #99e2d0;
+  border-left: 10px solid #008766;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-animation: spin 1.5s linear infinite;
+  -o-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+
+
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+*/
+/*GENERAL*/
+.logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  margin: 0;
+  padding: 10px;
+}
+.colorWhite {
+  color: white;
+  text-decoration: none;
+}
+.boldText {
+  font-weight: 500;
+}
+.flexBetween {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.directionRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.textDecorationNone {
+  text-decoration: none;
+  color: black;
+}
+h3,
+p {
+  margin: 0;
+}
+/*CITY*/
+.city {
+  background-color: #eaeaea;
+  color: #353535;
+}
+.cityTitle {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px;
+}
+/*EXPLORER*/
+.explorer {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #f5f5f5;
+}
+.explorer p {
+  font-weight: 300;
+}
+.button {
+  width: 218px;
+  height: 50px;
+  color: white;
+  background: linear-gradient(0.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.button:hover {
+  border: 2px solid #9356dc;
+}
+
+/*TUTO*/
+.tutoContainer {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.colorGreyTuto {
+  color: #7e7e7e;
+}
+.colorGreyTuto :hover {
+  color: #9356dc;
+}
+.tutoButtonIcon {
+  width: 15px;
+}
+.step {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #9356dc;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  left: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+}
+.tutoButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 73px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.tutoButton:hover {
+  background-color: #f5edff;
+}
+.tutoButton:hover .fa-solid {
+  color: #9356dc;
+}
+
+.tutoButtonText {
+  margin-left: 23px;
+}
+
+/*MENUS*/
+.menusContainer {
+  background-color: #f5f5f5;
+  padding: 30px 20px;
+}
+.card {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.heartLogo {
+  color: black;
+  position: absolute;
+  font-size: 2rem;
+  right: 1rem;
+  top: 80%;
+}
+.heartLogo:hover .regularHeart {
+  display: none;
+}
+.heartLogo:hover .solidHeart {
+  display: block !important;
+}
+/*.solidHeart {
+  color: red;
+  opacity: 0 !important;
+}*/
+.regularHeart {
+}
+.solidHeart {
+  display: none !important;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-transition: color 750ms;
+  -moz-transition: color 750ms;
+  -ms-transition: color 750ms;
+  -o-transition: color 750ms;
+  transition: color 750ms;
+}
+.fa-heart {
+  border-radius: 50%;
+  padding: 0.2em;
+}
+.solidHeart:hover {
+  color: #4652a2;
+}
+/*.solidHeart::before {
+  content: "\f004";
+  transition: color 1s ease-out;
+}
+.solidHeart:hover::before {
+  font-weight: bold;
+  cursor: pointer;
+  color: #9356dc;
+}*/
+.marginTitleCubeMenus {
+  margin-bottom: 5px;
+}
+.new {
+  position: relative;
+}
+.new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99e2d0;
+  color: #008766;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+.imgMenus {
+  object-fit: cover;
+  width: 100%;
+  height: 190px;
+}
+.cubeDetailMenus {
+  padding: 12px;
+}
+.fa-heart {
+  cursor: pointer;
+}
+/*FOOTER*/
+.footerContainer {
+  background-color: #353535;
+}
+.sizeBlocFooter {
+  padding: 15px 20px;
+  color: white;
+}
+.logoFooter {
+  width: 20px;
+  height: 13px;
+}
+.marginFooter {
+  display: flex;
+  margin-bottom: 8px;
+}
+.marginLogoFooter {
+  margin-left: 11px;
+}
+
+@media all and (min-width: 960px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  /*EXPLORER*/
+  .titleExplorer {
+    font-size: 40px;
+  }
+  /*TUTO*/
+  .tutoTitle {
+    margin-bottom: 30px;
+  }
+  .tutoButton {
+    width: 31%;
+  }
+  .tutoButtonContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tutoContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+  /*MENUS*/
+  .menusContainer {
+    overflow: hidden;
+    padding: 30px 0;
+  }
+  .cardContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+  .card {
+    margin-left: 20px;
+  }
+  .menusDesktop {
+    padding-left: 10%;
+    margin-right: -200px;
+  }
+  /*FOOTER*/
+  .positionDesktop {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-right: 80px;
+  }
+  .marginFooter {
+    margin: 0;
+    margin-right: 45px;
+  }
+  .descriptionDesktop {
+    display: flex;
+    margin-right: 40px;
+  }
+}
