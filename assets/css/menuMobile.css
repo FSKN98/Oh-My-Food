@@ -28,6 +28,40 @@ header {
   position: relative;
 }
 
+/*heart*/
+.heart-container {
+  position: absolute;
+  right: 1rem;
+  top: 80%;
+}
+
+.empty-heart {
+  display: block;
+}
+
+.full-heart {
+  display: none;
+}
+
+.heart-container:hover .empty-heart {
+  display: none;
+}
+
+.heart-container:hover .full-heart {
+  display: block;
+}
+
+.heart-gradient {
+  opacity: 0;
+  display: inline-block;
+  -webkit-transition: opacity 2s ease;
+  transition: opacity 2s ease;
+}
+
+.heart-gradient:hover {
+  opacity: 1;
+}
+
 /*Loader*/
 .loaderContainer {
   /* Firefox */
@@ -56,9 +90,10 @@ header {
 }
 
 .loaderContent {
-  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  position: fixed;
   width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,11 +107,20 @@ header {
   transition: opacity 1s ease-in-out;
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 10;
+  -webkit-animation: cssAnimation 0s 1.3s forwards;
+          animation: cssAnimation 0s 1.3s forwards;
+  visibility: visible;
+}
+
+@keyframes cssAnimation {
+  to {
+    visibility: hidden;
+  }
 }
 
 .dot {
-  width: 3%;
-  height: 3%;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: #99e2d0;
   margin: 0 15px;
@@ -110,36 +154,6 @@ header {
   }
 }
 
-/*.loader {
-  border: 10px solid #f3f3f3;
-  border-top: 10px solid $primaryColor;
-  border-right: 10px solid $secondaryColor;
-  border-bottom: 10px solid #99e2d0;
-  border-left: 10px solid #008766;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-animation: spin 1.5s linear infinite;
-  -o-animation: spin 1.5s linear infinite;
-  animation: spin 1.5s linear infinite;
-
-
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-*/
 /*GENERAL*/
 .logo {
   font-family: "Shrikhand", cursive;
@@ -344,47 +358,6 @@ p {
   top: 80%;
 }
 
-.heartLogo:hover .regularHeart {
-  display: none;
-}
-
-.heartLogo:hover .solidHeart {
-  display: block !important;
-}
-
-/*.solidHeart {
-  color: red;
-  opacity: 0 !important;
-}*/
-.solidHeart {
-  display: none !important;
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  -webkit-transition: color 750ms;
-  transition: color 750ms;
-}
-
-.fa-heart {
-  border-radius: 50%;
-  padding: 0.2em;
-}
-
-.solidHeart:hover {
-  color: #4652a2;
-}
-
-/*.solidHeart::before {
-  content: "\f004";
-  transition: color 1s ease-out;
-}
-.solidHeart:hover::before {
-  font-weight: bold;
-  cursor: pointer;
-  color: $primaryColor;
-}*/
 .marginTitleCubeMenus {
   margin-bottom: 5px;
 }
@@ -418,8 +391,9 @@ p {
   padding: 12px;
 }
 
-.fa-heart {
-  cursor: pointer;
+.width25 {
+  width: 33%;
+  margin-right: 20px;
 }
 
 /*FOOTER*/
@@ -449,10 +423,6 @@ p {
 }
 
 @media all and (min-width: 960px) {
-  .container {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
   /*EXPLORER*/
   .titleExplorer {
     font-size: 40px;
