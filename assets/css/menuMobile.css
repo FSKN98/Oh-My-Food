@@ -39,22 +39,6 @@ header {
   animation-fill-mode: forwards;
 }
 
-@keyframes cssAnimation {
-  to {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-}
-
-@-webkit-keyframes cssAnimation {
-  to {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-  }
-}
-
 .loaderContent {
   top: 0px;
   bottom: 0px;
@@ -76,6 +60,12 @@ header {
   -webkit-animation: cssAnimation 0s 1.3s forwards;
           animation: cssAnimation 0s 1.3s forwards;
   visibility: visible;
+}
+
+@-webkit-keyframes cssAnimation {
+  to {
+    visibility: hidden;
+  }
 }
 
 @keyframes cssAnimation {

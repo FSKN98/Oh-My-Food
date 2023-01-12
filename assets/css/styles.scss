@@ -19,7 +19,6 @@ header {
   position: relative;
 }
 /*LOADER*/
-
 .loaderContainer {
   -moz-animation: cssAnimation 0s ease-in 5s forwards;
   /* Firefox */
@@ -30,20 +29,6 @@ header {
   animation: cssAnimation 0s ease-in 5s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-}
-@keyframes cssAnimation {
-  to {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-}
-@-webkit-keyframes cssAnimation {
-  to {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-  }
 }
 .loaderContent {
   top: 0px;
