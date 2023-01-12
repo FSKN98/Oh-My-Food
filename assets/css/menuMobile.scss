@@ -6,6 +6,11 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+​ .container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto !important;
+}
 p,
 h1,
 h3 {
