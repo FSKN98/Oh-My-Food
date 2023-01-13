@@ -453,9 +453,6 @@ p {
         justify-content: space-around;
     overflow: scroll;
   }
-  .card {
-    margin-left: 20px;
-  }
   .menusDesktop {
     padding-left: 10%;
     margin-right: -200px;

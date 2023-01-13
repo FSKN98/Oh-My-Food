@@ -455,9 +455,6 @@ p {
         justify-content: space-around;
     overflow: scroll;
   }
-  .card {
-    margin-left: 20px;
-  }
   .menusDesktop {
     padding-left: 10%;
     margin-right: -200px;
@@ -516,6 +513,9 @@ h4 {
   margin: 0;
   font-size: 19px;
   font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* MOBILE*/
@@ -778,14 +778,15 @@ h4 {
 
 .menuDescription {
   padding: 13px 20px 13px 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  width: 70%;
 }
 
 .sizeDescription {
   font-weight: 300;
   font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .check {

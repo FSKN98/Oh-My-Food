@@ -26,6 +26,9 @@ h4 {
   margin: 0;
   font-size: 19px;
   font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 /* MOBILE*/
 .returnLogo {
@@ -214,14 +217,14 @@ h4 {
 }
 .menuDescription {
   padding: 13px 20px 13px 10px;
-
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  width: 70%;
 }
 .sizeDescription {
   font-weight: 300;
   font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .check {
   background-color: $lightGreenColor;
