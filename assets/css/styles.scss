@@ -286,6 +286,11 @@ p {
   margin-left: 11px;
 }
 @media all and (min-width: 960px) {
+  ​ .container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto !important;
+  }
   /*EXPLORER*/
   .titleExplorer {
     font-size: 40px;
@@ -314,6 +319,7 @@ p {
   .cardContainer {
     display: flex;
     justify-content: space-around;
+    overflow: scroll;
   }
   .card {
     margin-left: 20px;

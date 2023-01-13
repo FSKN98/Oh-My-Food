@@ -413,6 +413,11 @@ p {
 }
 
 @media all and (min-width: 960px) {
+  ​ .container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto !important;
+  }
   /*EXPLORER*/
   .titleExplorer {
     font-size: 40px;
@@ -448,6 +453,7 @@ p {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    overflow: scroll;
   }
   .card {
     margin-left: 20px;
@@ -772,6 +778,9 @@ h4 {
 
 .menuDescription {
   padding: 13px 20px 13px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .sizeDescription {

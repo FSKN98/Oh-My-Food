@@ -214,6 +214,10 @@ h4 {
 }
 .menuDescription {
   padding: 13px 20px 13px 10px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .sizeDescription {
   font-weight: 300;
