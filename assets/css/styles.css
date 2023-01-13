@@ -442,8 +442,8 @@ p {
   }
   /*MENUS */
   .menusContainer {
-    overflow: hidden;
     padding: 30px 0;
+    overflow-x: scroll;
   }
   .cardContainer {
     display: -webkit-box;
@@ -451,7 +451,6 @@ p {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    overflow: scroll;
   }
   .menusDesktop {
     padding-left: 10%;
